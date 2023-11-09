@@ -73,6 +73,7 @@ function Card() {
         model: "gpt-3.5-turbo",
       });
       const description = completion.choices[0].message.content;
+      console.log(description);
       handleshowresult(description);
     } catch (error) {
       console.error("Error generating description:", error);

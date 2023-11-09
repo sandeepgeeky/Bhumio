@@ -5,11 +5,9 @@ function App() {
   return (
     <div
       style={{
-        padding: "50px",
+        padding: "15px",
         backgroundColor: "black",
         height: "100vh",
-        width: "100%",
-        overflowX: "hidden",
       }}
     >
       <h1 style={{ textAlign: "center", color: "white" }}>
