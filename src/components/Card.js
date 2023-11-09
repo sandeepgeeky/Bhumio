@@ -33,6 +33,9 @@ function Card() {
     padding: 180,
     boxShadow: "0 4px 6px red",
   };
+  const preStyle = {
+    whiteSpace: "pre-wrap",
+  };
 
   const maxCharacters = 500;
   const handleTextChange = (event) => {
@@ -210,12 +213,12 @@ function Card() {
           Generate Article
         </Button>
       </Box>
-      <Divider orientation="vertical" color="black" />
+      <Divider orientation="vertical" color="red" />
       <Box style={{ flex: 1, padding: "20px" }}>
         <Box>
           <Typography variant="h4">Result</Typography>
           <Paper elevation={3} style={paperStyle}>
-            <pre>{result}</pre>
+            <pre style={preStyle}>{result}</pre>
           </Paper>
         </Box>
         <Stack direction="row" style={{ paddingTop: "10px" }}>
