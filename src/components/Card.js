@@ -27,10 +27,11 @@ function Card() {
   const [error, setError] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
   const [result, handleshowresult] = useState("");
+
   let str;
 
   const paperStyle = {
-    padding: 180,
+    padding: 50,
     boxShadow: "0 4px 6px red",
   };
   const preStyle = {
@@ -86,13 +87,13 @@ function Card() {
   };
 
   const handleSave = () => {
-    const textToSave = text;
+    const textToSave = result;
     localStorage.setItem("savedText", textToSave);
     console.log("Text saved:", textToSave);
   };
 
   const handleCopy = () => {
-    const textToCopy = text;
+    const textToCopy = result;
     navigator.clipboard
       .writeText(textToCopy)
       .then(() => {
@@ -219,6 +220,35 @@ function Card() {
           <Typography variant="h4">Result</Typography>
           <Paper elevation={3} style={paperStyle}>
             <pre style={preStyle}>{result}</pre>
+            {/* <pre style={preStyle}>
+              lorem23 setSelectedValueds d savedd setSelectedValuedsds
+              dangerouslyAllowBrowsers ere reacter
+              console.log('here');console.log('here');console.log('here');console.log('here');
+              lorem23 setSelectedValueds d savedd setSelectedValuedsds
+              dangerouslyAllowBrowsers ere reacter
+              console.log('here');console.log('here');console.log('here');console.log('here');
+              lorem23 setSelectedValueds d savedd setSelectedValuedsds
+              dangerouslyAllowBrowsers ere reacter
+              console.log('here');console.log('here');console.log('here');console.log('here');
+              lorem23 setSelectedValueds d savedd setSelectedValuedsds
+              dangerouslyAllowBrowsers ere reacter
+              console.log('here');console.log('here');console.log('here');console.log('here');
+              lorem23 setSelectedValueds d savedd setSelectedValuedsds
+              dangerouslyAllowBrowsers ere reacter
+              console.log('here');console.log('here');console.log('here');console.log('here');
+              lorem23 setSelectedValueds d savedd setSelectedValuedsds
+              dangerouslyAllowBrowsers ere reacter
+              console.log('here');console.log('here');console.log('here');console.log('here');
+              lorem23 setSelectedValueds d savedd setSelectedValuedsds
+              dangerouslyAllowBrowsers ere reacter
+              console.log('here');console.log('here');console.log('here');console.log('here');
+              lorem23 setSelectedValueds d savedd setSelectedValuedsds
+              dangerouslyAllowBrowsers ere reacter
+              console.log('here');console.log('here');console.log('here');console.log('here');
+              lorem23 setSelectedValueds d savedd setSelectedValuedsds
+              dangerouslyAllowBrowsers ere reacter
+              console.log('here');console.log('here');console.log('here');console.log('here');
+            </pre> */}
           </Paper>
         </Box>
         <Stack direction="row" style={{ paddingTop: "10px" }}>
